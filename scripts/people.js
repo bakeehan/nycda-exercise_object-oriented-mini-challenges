@@ -15,11 +15,10 @@ function Person (staff, student, name, gender, school) {
 	this.person = true;
 	this.gender = gender;
 	this.school = school;
-	let go = school.people;
 	let send = function (where, folk) {
 		where.push(folk);
 	}
-	send (go, this);
+	send (school.people, this);
 }
 
 function Teacher (subject, name, gender, school) {

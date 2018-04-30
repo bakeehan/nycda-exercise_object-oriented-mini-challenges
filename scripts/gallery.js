@@ -16,8 +16,16 @@ function Album (name, curator) {
 	this.name = name;
 	this.curator = curator;
 	this.photos = [];
+	this.add = function(photo) {
+		this.photos.push(photo);
+	}
+	this.listPhotos = function() {
+		for (i=0;i<this.photos.length;i++) {
+			console.log(this.photos[i]);
+		}
+	}
 }
 
 var landscapes = new Album ("Lanscape Photos", "Cerina");
 
-landscapes.photos.push(sunset, mountain);
+landscapes.add(sunset, mountain);
